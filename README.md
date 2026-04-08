@@ -16,3 +16,6 @@ Deadline für Abgabe per Pull Request: 26.04.2026 23:59 Uhr. Außerdem ist zusä
 
 Sie dürfen mit Ihren Bugfixes die bestehende Implementierung deutlich verändern (z.B. die Verwendung der privaten Variablen), solange Sie dabei nicht die Signaturen (Name, Typ, Parameter) der öffentlichen Methoden ändern.
 Sie dürfen auch gerne Hilfsmethoden hinzufügen, die intern von den öffentlichen Methoden aufgerufen werden, und diese internen Hilfsmethoden zum Zwecke der besseren Testbarkeit auch öffentlich (public) machen, um entsprechende Unit-Tests für diese Hilfsmethoden hinzufügen zu können.
+
+
+## funktioniert not so gut 
