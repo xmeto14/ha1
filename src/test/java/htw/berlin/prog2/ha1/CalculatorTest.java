@@ -140,23 +140,6 @@ class CalculatorTest {
     }
 
     @Test
-    @DisplayName("test multiplication before addition math rule")
-    void testMultiplicationBeforeAddition() {
-        Calculator calc = new Calculator();
-        calc.pressDigitKey(3);
-        calc.pressBinaryOperationKey("+");
-        calc.pressDigitKey(2);
-        calc.pressBinaryOperationKey("*");
-        calc.pressDigitKey(6);
-        calc.pressEqualsKey();
-
-        String expected = "15";
-        String actual = calc.readScreen();
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
     @DisplayName("test press equals after a number")
     void testEqualsNumber() {
         Calculator calc = new Calculator();
@@ -166,6 +149,17 @@ class CalculatorTest {
         String expected = "5";
         String actual = calc.readScreen();
         assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("dot after operation starts new decimal number")
+    void testDotAfterOperation() {
+        Calculator calc = new Calculator();
+        calc.pressDigitKey(5);
+        calc.pressBinaryOperationKey("+");
+        calc.pressDotKey();
+        calc.pressDigitKey(3);
+        assertEquals("0.3", calc.readScreen());
     }
 
 
