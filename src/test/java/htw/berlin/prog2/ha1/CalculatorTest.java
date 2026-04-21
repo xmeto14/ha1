@@ -128,7 +128,7 @@ class CalculatorTest {
     void testDivisionOf2Numbers() {
         Calculator calc = new Calculator();
         calc.pressDigitKey(3);
-        calc.pressBinaryOperationKey("%");
+        calc.pressBinaryOperationKey("/");
         calc.pressDigitKey(2);
         calc.pressEqualsKey();
 
@@ -137,12 +137,11 @@ class CalculatorTest {
 
         assertEquals(expecteted, actual);
 
-
     }
 
     @Test
     @DisplayName("test multiplication before addition math rule")
-    void testMultiplicationBeforAddition() {
+    void testMultiplicationBeforeAddition() {
         Calculator calc = new Calculator();
         calc.pressDigitKey(3);
         calc.pressBinaryOperationKey("+");
@@ -157,7 +156,17 @@ class CalculatorTest {
 
     }
 
+    @Test
+    @DisplayName("test press equals after a number")
+    void testEqualsNumber() {
+        Calculator calc = new Calculator();
+        calc.pressDigitKey(5);
+        calc.pressEqualsKey();
 
+        String expected = "5";
+        String actual = calc.readScreen();
+        assertEquals(expected, actual);
+    }
 
 
     //TODO hier weitere Tests erstellen
