@@ -18,4 +18,3 @@ Sie dürfen mit Ihren Bugfixes die bestehende Implementierung deutlich veränder
 Sie dürfen auch gerne Hilfsmethoden hinzufügen, die intern von den öffentlichen Methoden aufgerufen werden, und diese internen Hilfsmethoden zum Zwecke der besseren Testbarkeit auch öffentlich (public) machen, um entsprechende Unit-Tests für diese Hilfsmethoden hinzufügen zu können.
 
 
-## funktioniert not so gut 
