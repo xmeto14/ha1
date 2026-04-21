@@ -94,7 +94,9 @@ public class Calculator {
      * Beim zweimaligem Drücken, oder wenn bereits ein Trennzeichen angezeigt wird, passiert nichts.
      */
     public void pressDotKey() {
+        if(screen.equals("0") || latestValue == Double.parseDouble(screen)) screen = "0";
         if(!screen.contains(".")) screen = screen + ".";
+
     }
 
     /**
@@ -118,6 +120,7 @@ public class Calculator {
      * und das Ergebnis direkt angezeigt.
      */
     public void pressEqualsKey() {
+        if(latestOperation.isEmpty()) return;
         var result = switch(latestOperation) {
             case "+" -> latestValue + Double.parseDouble(screen);
             case "-" -> latestValue - Double.parseDouble(screen);
